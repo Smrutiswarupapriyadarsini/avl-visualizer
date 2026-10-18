@@ -1,0 +1,43 @@
+AVL Tree Visualizer — Project Notes
+1. Project Overview & Objective
+What is it? Ek interactive web application hai jo Data Structures & Algorithms (DSA) ke AVL Trees ko real-time mein visualize karne mein madad karta hai.
+
+Tech Stack: Next.js, React, Tailwind CSS.
+
+Live URL: [https://avl-visualizer-xi.vercel.app](https://avl-visualizer-xi.vercel.app)
+
+2. Core Concepts (AVL Tree Kya Hai?)
+AVL Tree ek Self-Balancing Binary Search Tree (BST) hota hai.
+
+Isme har node par Balance Factor check hota hai, jiska formula yeh hai:
+
+Balance Factor=Height(Left Subtree)−Height(Right Subtree)
+Balance Factor hamesha -1, 0, ya 1 ke beech hona chahiye. Agar isse zyada ya kam ho, toh tree unbalanced ho jata hai aur Rotations hoti hain.
+
+3. Step-by-Step Working Flow (Kaise Kaam Karta Hai?)
+Node Insertion (Number Add Karna):
+
+User input box mein koi bhi number dal kar Insert button dabata hai.
+
+Number standard Binary Search Tree ke rules ke hisaab se sahi position par add ho jata hai.
+
+Balance Factor Check:
+
+jaise hi naya node add hota hai, algorithm niche se upar ki taraf (bottom-up approach) har node ka Balance Factor recalculate karta hai.
+
+Automatic Rotations (Jab Tree Unbalanced Ho):
+Agar kisi node ka balance factor -1, 0, 1 ki range se bahar gaya, toh tree khud ko balance karne ke liye in 4 rotations mein se koi ek perform karta hai:
+
+LL Rotation (Left-Left Case): Single Right Rotation hoti hai.
+
+RR Rotation (Right-Right Case): Single Left Rotation hoti hai.
+
+LR Rotation (Left-Right Case): Pehle Left rotation, phir Right rotation hoti hai.
+
+RL Rotation (Right-Left Case): Pehle Right rotation, phir Left rotation hoti hai.
+
+Visual Output & UI:
+
+Screen par naya balanced tree visually animate hokar dikhta hai jisse user ko saaf samajh aata hai ki tree ne khud ko rotate karke kaise balance kiya.
+
+Aap ise copy karke ek Note mein save kar lo, jab bhi koi dost poochega ki project mein kya hai aur kaise work karta hai, aap yeh ek baar dikha dogi toh sab ekdam clear ho jayega!
